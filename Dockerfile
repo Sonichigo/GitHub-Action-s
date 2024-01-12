@@ -6,4 +6,4 @@ COPY . .
 RUN npm install
 RUN echo "Installed and BUilt successfully"
 RUN ls
-ENTRYPOINT ["/entrypoint.sh"]
+CMD [ "node", "index.js" ]
