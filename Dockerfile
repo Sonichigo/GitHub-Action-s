@@ -1,9 +1,15 @@
 FROM node:18
 
-COPY package*.json ./
+COPY package*.json /
 
 RUN npm install
 
-COPY . .
+COPY index.js /index.js
 
-CMD [ "node", "index.js" ]
+RUN ["chmod", "+x", "index.js"]
+
+RUN ls
+RUN cd .. ; ls
+RUN cd ../ ; ls
+
+ENTRYPOINT [ "/index.js" ]
