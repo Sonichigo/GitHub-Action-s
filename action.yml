@@ -1,4 +1,4 @@
-name: 'pr-comment'
+name: 'pr-change-commenter'
 description: 'Adds PR changes as comment'
 inputs:
   owner:
