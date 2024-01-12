@@ -5,8 +5,8 @@ COPY package*.json ./
 
 RUN npm install
 
-COPY . .
-RUN ["chmod", "+x", "index.js"]
+COPY index.js /index.js
+RUN ["chmod", "+x", "/index.js"]
 
 RUN ls
-ENTRYPOINT ["node", "index.js"]
+ENTRYPOINT ["node", "/index.js"]
