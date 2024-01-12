@@ -2,11 +2,9 @@ FROM node:lts
 
 WORKDIR /usr/src/app
 COPY package*.json ./
-
+COPY . .
 RUN npm install
-
-COPY index.js /index.js
-RUN ["chmod", "+x", "/index.js"]
-
+RUN npm build
+RUN echo "Installed and BUilt successfully"
 RUN ls
-ENTRYPOINT ["node", "/index.js"]
+ENTRYPOINT ["/entrypoint.sh"]
