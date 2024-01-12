@@ -9,4 +9,4 @@ COPY . .
 RUN ["chmod", "+x", "index.js"]
 
 RUN ls
-ENTRYPOINT ["node", "/index.js"]
+ENTRYPOINT ["node", "index.js"]
