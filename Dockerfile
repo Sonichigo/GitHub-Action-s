@@ -1,6 +1,6 @@
 FROM node:lts
 
-COPY package*.json /github/workspace
+COPY package*.json ./
 
 RUN npm install
 
