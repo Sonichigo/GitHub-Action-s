@@ -1,9 +1,11 @@
 FROM node:lts
 
-WORKDIR /usr/src/app
 COPY package*.json ./
-COPY . .
+
 RUN npm install
-RUN echo "Installed and BUilt successfully"
+
+COPY index.js /github/workspace/index.js
+RUN ["chmod", "+x", "/github/workspace/index.js"]
+
 RUN ls
-CMD [ "node", "index.js" ]
+ENTRYPOINT ["node", "/github/workspace/index.js"]
