@@ -9,5 +9,3 @@ RUN ["chmod", "+x", "/github/workspace/index.js"]
 
 RUN ls
 ENTRYPOINT ["node", "/github/workspace/index.js"]
-
-RUN cd /github/workspace && ls
